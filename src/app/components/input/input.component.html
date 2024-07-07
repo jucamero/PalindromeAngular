@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Chequea tus Palíndromos</h1>
+    <form (ngSubmit)="checkPalindrome()">
+      <label for="inputText">Valida tu palabra: </label>
+      <input placeholder="Ingresa una palabra o número"  type="text" id="inputText" [(ngModel)]="inputText" name="inputText" required>
+      <button type="submit">Verificar</button>
+    </form>
+  
+    <div *ngIf="isPalindrome !== null">
+      <p *ngIf="isPalindrome">{{inputText}} ¡Es un palíndromo!</p>
+      <p *ngIf="!isPalindrome">{{inputText}} No es un palíndromo.</p>
+    </div>
+
+  </div>
